@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-md-4">
+
+        <div class="card">
+            <div class="card-body">
+                <form action="/images/add" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                        <input type="text" name="Nombre"
+                        class="form-control" placeholder="Nombre del Pescado">
+                        </div>
+                         <div class="form-group">
+                        <textarea name="Descripcion" 
+                        class="form-control" placeholder="Descripcion"></textarea>
+                        </div>
+                         <div class="form-group">
+                        <input type="text" name="Precio"
+                        class="form-control" placeholder="Precio">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                                <input type="file" name="imageFish" class="custom-file-input" id="InputGroupFile01">
+                                <label for="InputGroupFile01"
+                                class="custom-file-label"> Escoge la imagen</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary"> Añadir pez</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                         <th>Descripcion</th>
+                          <th>Precio</th>
+                          <th>Operaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each Fishes}}
+                    <tr>
+                        <td>{{Nombre}}</td>
+                         <td>{{Descripcion}}</td>
+                          <td>{{Precio}}</td>
+                          <td>
+                              <a href="{{imageURL}}" target="_blank"
+                              class="btn btn-primary">Vista</a>
+                              <a href="/images/Delete/{{_id}}"
+                              class="btn btn-danger">Eliminar</a>
+                          </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>

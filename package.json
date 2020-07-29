@@ -1,0 +1,36 @@
+{
+  "name": "FishDream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+   "start":"node src/index.js",
+   "dev":"nodemon src/index.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioCanul/FishDream.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioCanul/FishDream/issues"
+  },
+  "homepage": "https://github.com/MarioCanul/FishDream#readme",
+  "dependencies": {
+    "cloudinary": "^1.22.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "fs-extra": "^9.0.1",
+    "mongoose": "^5.9.26",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
